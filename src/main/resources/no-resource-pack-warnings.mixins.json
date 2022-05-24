@@ -1,0 +1,11 @@
+{
+	"required": true,
+	"minVersion": "0.8",
+	"package": "no.resource.pack.warnings.mixin",
+	"client": [
+		"client.PackEntryMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

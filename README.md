@@ -1,0 +1,1 @@
+# no-resource-pack-warnings

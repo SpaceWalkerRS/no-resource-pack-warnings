@@ -1,0 +1,42 @@
+{
+	"schemaVersion": 1,
+	"id": "no-resource-pack-warnings",
+	"version": "${version}",
+
+	"name": "No Resource Pack Warnings",
+	"description": "Disable warnings for outdated resource packs",
+	"authors": [
+		"Space Walker"
+	],
+	"contributors": [
+	],
+	"contact": {
+		"homepage": "https://modrinth.com/mod/no-resource-pack-warnings",
+		"sources": "https://github.com/SpaceWalkerRS/no-resource-pack-warnings",
+		"issues": "https://github.com/SpaceWalkerRS/no-resource-pack-warnings/issues"
+	},
+
+	"license": "MIT Licence",
+
+	"environment": "*",
+	"entrypoints": {
+	},
+	"mixins": [
+		"no-resource-pack-warnings.mixins.json"
+	],
+
+	"depends": {
+	},
+	"breaks": {
+	},
+	"suggests": {
+	},
+
+	"custom": {
+		"modmenu": {
+			"links": {
+				"modmenu.discord": "https://discord.gg/EJC9zkX"
+			}
+		}
+	}
+}
