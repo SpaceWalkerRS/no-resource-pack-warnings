@@ -11,6 +11,17 @@ import net.minecraft.server.packs.repository.PackCompatibility;
 public class OptionsMixin {
 
 	@Redirect(
+		method = "updateResourcePacks",
+		at = @At(
+			value = "INVOKE",
+			target = "Lnet/minecraft/server/packs/repository/PackCompatibility;isCompatible()Z"
+		)
+	)
+	private boolean onUpdateResourcePacksRedirectIsCompatible(PackCompatibility compatibility) {
+		return true;
+	}
+
+	@Redirect(
 		method = "loadSelectedResourcePacks",
 		at = @At(
 			value = "INVOKE",
