@@ -3,7 +3,8 @@
 	"minVersion": "0.8",
 	"package": "no.resource.pack.warnings.mixin",
 	"client": [
-		"client.PackEntryMixin"
+		"client.OptionsMixin",
+		"client.ResourcePackEntryMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
