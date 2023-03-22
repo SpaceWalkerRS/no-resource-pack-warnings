@@ -4,7 +4,7 @@
 	"package": "no.resource.pack.warnings.mixin",
 	"client": [
 		"client.OptionsMixin",
-		"client.ResourcePackEntryMixin"
+		"client.PackEntryMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
