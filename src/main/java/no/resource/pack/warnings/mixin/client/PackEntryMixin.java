@@ -22,7 +22,7 @@ public class PackEntryMixin {
 	}
 
 	@Redirect(
-		method = "mouseClicked",
+		method = "handlePackSelection",
 		at = @At(
 			value = "INVOKE",
 			target = "Lnet/minecraft/server/packs/repository/PackCompatibility;isCompatible()Z"
