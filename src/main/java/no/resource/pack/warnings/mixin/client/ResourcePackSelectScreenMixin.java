@@ -4,20 +4,20 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
 
-import net.minecraft.client.Options;
+import net.minecraft.client.gui.screens.resourcepacks.ResourcePackSelectScreen;
 import net.minecraft.server.packs.repository.PackCompatibility;
 
-@Mixin(Options.class)
-public class OptionsMixin {
+@Mixin(ResourcePackSelectScreen.class)
+public class ResourcePackSelectScreenMixin {
 
 	@Redirect(
-		method = "loadResourcePacks",
+		method = "lambda$init$1",
 		at = @At(
 			value = "INVOKE",
 			target = "Lnet/minecraft/server/packs/repository/PackCompatibility;isCompatible()Z"
 		)
 	)
-	private boolean onLoadSelectedResourcePacksRedirectIsCompatible(PackCompatibility compatibility) {
+	private boolean onInitRedirectIsCompatible(PackCompatibility compatibility) {
 		return true;
 	}
 }

@@ -4,11 +4,11 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
 
-import net.minecraft.client.gui.screens.packs.TransferableSelectionList.PackEntry;
+import net.minecraft.client.gui.screens.resourcepacks.lists.ResourcePackList.ResourcePackEntry;
 import net.minecraft.server.packs.repository.PackCompatibility;
 
-@Mixin(PackEntry.class)
-public class PackEntryMixin {
+@Mixin(ResourcePackEntry.class)
+public class ResourcePackEntryMixin {
 
 	@Redirect(
 		method = "render",
@@ -22,7 +22,7 @@ public class PackEntryMixin {
 	}
 
 	@Redirect(
-		method = "handlePackSelection",
+		method = "mouseClicked",
 		at = @At(
 			value = "INVOKE",
 			target = "Lnet/minecraft/server/packs/repository/PackCompatibility;isCompatible()Z"
