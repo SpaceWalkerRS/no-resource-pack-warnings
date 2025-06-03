@@ -25,6 +25,7 @@ public class OptionsMixin {
 		method = "loadSelectedResourcePacks",
 		at = @At(
 			value = "INVOKE",
+			ordinal = 0,
 			target = "Lnet/minecraft/server/packs/repository/PackCompatibility;isCompatible()Z"
 		)
 	)
