@@ -11,7 +11,7 @@ import net.minecraft.server.packs.repository.PackCompatibility;
 public class PackEntryMixin {
 
 	@Redirect(
-		method = "renderContent",
+		method = "extractContent",
 		at = @At(
 			value = "INVOKE",
 			target = "Lnet/minecraft/server/packs/repository/PackCompatibility;isCompatible()Z"
